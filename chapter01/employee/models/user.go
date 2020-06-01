@@ -1,10 +1,10 @@
-package user
+package models
 
 import "time"
 
-// User structure
+// User object model
 type User struct {
-	Id        int
+	ID        int
 	Name      string
 	CreatedAt time.Time
 	Status    bool
@@ -12,7 +12,7 @@ type User struct {
 
 // New - create basic user
 func (user *User) New(id int, name string, created time.Time, status bool) {
-	user.Id = id
+	user.ID = id
 	user.Name = name
 	user.CreatedAt = created
 	user.Status = status
