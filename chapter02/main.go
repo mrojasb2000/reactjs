@@ -19,8 +19,8 @@ func main() {
 	usr.CreatedAt = time.Now()
 	usr.Status = true
 
-	fmt.Printf("\nID: %d", usr.ID)
-	fmt.Printf("\nName: %s", usr.Name)
+	fmt.Printf("\nID     : %d", usr.ID)
+	fmt.Printf("\nName   : %s", usr.Name)
 	fmt.Printf("\nCreated: %s", usr.CreatedAt)
-	fmt.Printf("\nStatus: %t\n", usr.Status)
+	fmt.Printf("\nStatus : %t\n", usr.Status)
 }
