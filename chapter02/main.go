@@ -32,4 +32,5 @@ func main() {
 	fmt.Printf("\nName   : %s", newUser.Name)
 	fmt.Printf("\nCreated: %s", newUser.CreatedAt)
 	fmt.Printf("\nStatus : %t\n", newUser.Status)
+
 }
