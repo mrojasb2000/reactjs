@@ -14,6 +14,10 @@ type user struct {
 	Status    bool
 }
 
+type pepe struct {
+	model.User // Herencia en formato golang
+}
+
 func main() {
 	var usr = new(user)
 	usr.ID = 1
@@ -27,10 +31,15 @@ func main() {
 	fmt.Printf("\nStatus : %t\n", usr.Status)
 
 	var newUser = new(model.User)
-	newUser.ID = 2
 	fmt.Printf("\nID     : %d", newUser.ID)
 	fmt.Printf("\nName   : %s", newUser.Name)
 	fmt.Printf("\nCreated: %s", newUser.CreatedAt)
 	fmt.Printf("\nStatus : %t\n", newUser.Status)
 
+	threeUser := new(pepe)
+	threeUser.New(3, "username", time.Now(), false)
+	fmt.Printf("\nID     : %d", threeUser.ID)
+	fmt.Printf("\nName   : %s", threeUser.Name)
+	fmt.Printf("\nCreated: %s", threeUser.CreatedAt)
+	fmt.Printf("\nStatus : %t\n", threeUser.Status)
 }
